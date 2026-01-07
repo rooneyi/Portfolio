@@ -1,0 +1,86 @@
+<section class="relative py-32 bg-background overflow-hidden">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+        <p class="text-sm text-muted-foreground mb-4">
+            Technical stack
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-foreground mb-6">
+            Tools I rely on to build reliable systems
+        </h2>
+
+        <p class="text-sm text-muted-foreground max-w-2xl mx-auto mb-20">
+            A focused backend-first stack designed for clarity,
+            performance and long-term maintainability.
+        </p>
+
+        <div class="relative mx-auto w-full max-w-3xl h-[320px] md:block hidden">
+            <!-- Desktop layout (absolute) -->
+            <!-- PHP -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2"><div class="icon text-[#777BB4] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:php" /></div></div>
+            <!-- Symfony -->
+            <div class="absolute top-16 left-[20%]"><div class="icon  bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:symfony" /></div></div>
+            <!-- Laravel -->
+            <div class="absolute top-20 right-[18%]"><div class="icon text-[#FF2D20] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:laravel" /></div></div>
+            <!-- MySQL -->
+            <div class="absolute top-36 left-[35%]"><div class="icon text-[#4479A1] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:mysql" /></div></div>
+            <!-- VSCode -->
+            <div class="absolute top-10 left-[5%]"><div class="icon text-[#007ACC] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:visualstudiocode" /></div></div>
+            <!-- PhpStorm -->
+            <div class="absolute top-10 right-[5%]"><div class="icon text-[#5C2D91] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:phpstorm" /></div></div>
+            <!-- Next.js -->
+            <div class="absolute bottom-24 left-[10%]"><div class="icon text-white bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:nextdotjs" /></div></div>
+            <!-- Docker -->
+            <div class="absolute bottom-24 right-[10%]"><div class="icon text-[#2496ED] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:docker" /></div></div>
+            <!-- Django -->
+            <div class="absolute bottom-24 left-1/2 -translate-x-1/2"><div class="icon text-[#092E20] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:django" /></div></div>
+            <!-- Git -->
+            <div class="absolute top-44 right-[35%]"><div class="icon text-[#F05032] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:git" /></div></div>
+            <!-- Linux -->
+            <div class="absolute bottom-12 left-[18%]"><div class="icon text-[#FCC624] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:linux" /></div></div>
+            <!-- REST / API -->
+            <div class="absolute bottom-8 right-[20%]"><div class="icon text-sky-500 bg-card border border-border shadow-lg"><twig:Ux:Icon name="heroicons:arrows-right-left" /></div></div>
+            <!-- Postman -->
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2"><div class="icon text-[#FF6C37]  bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:postman" /></div></div>
+        </div>
+        <!-- Mobile layout (grid) -->
+        <div class="grid grid-cols-3 gap-4 justify-center items-center md:hidden">
+            <div class="icon text-[#777BB4] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:php" /></div>
+            <div class="icon bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:symfony" /></div>
+            <div class="icon text-[#FF2D20] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:laravel" /></div>
+            <div class="icon text-[#4479A1] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:mysql" /></div>
+            <div class="icon text-[#007ACC] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:visualstudiocode" /></div>
+            <div class="icon text-[#5C2D91] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:phpstorm" /></div>
+            <div class="icon text-white bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:nextdotjs" /></div>
+            <div class="icon text-[#2496ED] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:docker" /></div>
+            <div class="icon text-[#092E20] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:django" /></div>
+            <div class="icon text-[#F05032] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:git" /></div>
+            <div class="icon text-[#FCC624] bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:linux" /></div>
+            <div class="icon text-sky-500 bg-card border border-border shadow-lg"><twig:Ux:Icon name="heroicons:arrows-right-left" /></div>
+            <div class="icon text-[#FF6C37]  bg-card border border-border shadow-lg"><twig:Ux:Icon name="simple-icons:postman" /></div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        background: rgba(0, 0, 0, 0.035);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .icon svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .icon:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    }
+</style>
