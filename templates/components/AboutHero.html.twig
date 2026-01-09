@@ -2,9 +2,49 @@
     <twig:Pattern:Top />
     <twig:Pattern:Bottom />
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid gap-12 lg:grid-cols-2 items-center">
-            <div class="space-y-6">
+            {# Image on top on small screens, on the right on large screens #}
+            <div class="relative flex justify-center lg:justify-end order-1 lg:order-2">
+                <div class="relative max-w-sm space-y-6">
+                    <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <img
+                            src="/assets/images/rooney1.jpeg"
+                            alt="Rooney portrait"
+                            class="h-[420px] w-full object-cover grayscale"
+                        />
+                    </div>
+                    <div class="mt-2 pt-4 flex flex-wrap gap-3 border-t border-border/60">
+                        <a
+                            href="https://github.com/rooneyi"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 rounded-full border border-border/70 bg-card/80 px-4 py-1.5 text-xs font-medium text-muted-foreground hover:bg-muted/40 hover:text-foreground transition"
+                        >
+                            <twig:Ux:Icon name="simple-icons:github" class="w-4 h-4" />
+                            <span>GitHub</span>
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/in/rooney-kalumba-45541428a/"
+                            target="_blank"
+                            class="inline-flex items-center gap-2 rounded-full border border-border/70 bg-card/80 px-4 py-1.5 text-xs font-medium text-muted-foreground hover:bg-muted/40 hover:text-foreground transition"
+                        >
+                            <twig:Ux:Icon name="simple-icons:linkedin" class="w-4 h-4" />
+                            <span>LinkedIn</span>
+                        </a>
+
+                        <a
+                            href="mailto:rooneykalumba610@gmail.com"
+                            class="inline-flex items-center gap-2 rounded-full border border-border/70 bg-card/80 px-4 py-1.5 text-xs font-medium text-muted-foreground hover:bg-muted/40 hover:text-foreground transition"
+                        >
+                            <twig:Ux:Icon name="heroicons:envelope" class="w-4 h-4" />
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6 order-2 lg:order-1">
                 <p class="text-sm text-muted-foreground">
                     About me · Backend & Architecture · Open Source Enthusiast
                 </p>
@@ -21,10 +61,10 @@
 
                 <div class="flex flex-wrap items-center gap-4 pt-4">
                     <a
-                        href="#projects"
+                        href="{{ path('app_cv_download') }}"
                         class="inline-flex items-center rounded-full bg-gray-900 px-6 py-3 text-sm font-medium text-white hover:bg-gray-800 transition"
                     >
-                        View projects
+                        Download CV
                     </a>
 
                     <a
@@ -36,17 +76,7 @@
                     </a>
                 </div>
             </div>
-
-            <div class="relative flex justify-center lg:justify-end">
-                <div class="relative max-w-sm rounded-2xl overflow-hidden shadow-lg">
-                    <img
-                        src="/assets/images/rooney1.jpeg"
-                        alt="Rooney portrait"
-                        class="h-[420px] w-full object-cover grayscale"
-                    />
-                </div>
-            </div>
         </div>
     </div>
 </section>
-                Why I build this way
+

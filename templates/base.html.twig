@@ -13,9 +13,13 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body>
-        {% block body %}
-        <twig:AboutStory />
-{% endblock %}
+    <body class="bg-background text-foreground">
+        <twig:Header />
+
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+
+        <twig:Footer />
     </body>
 </html>

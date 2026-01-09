@@ -1,51 +1,28 @@
 {% set active_class = "text-primary decoration-wavy underline-offset-2 underline decoration-current" %}
 
-<header class="sticky w-full top-0 z-60 bg-white/60 backdrop-blur-sm">
-    <nav class="max-w-7xl w-full border-b border-border border-dashed mx-auto px-4 sm:px-6 md:px-8 xl:px-5 flex items-center justify-between gap-4 py-2">
+<header class="sticky w-full top-0 z-60 bg-background/80 backdrop-blur-sm border-b border-border/60">
+    <nav class="max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-8 xl:px-5 flex items-center justify-between gap-4 py-3">
         <div class="flex relative z-40 lg:z-auto">
-            <a href="{{ path("index") }}" aria-label="{{ "components.header.links.home" | trans }}" class="w-max">
+            <a href="{{ path('app_home') }}" aria-label="Home" class="w-max">
                 <img src="{{ asset('logo.png') }}" width="540" height="248" alt="Logo LegalterLaw" class="h-12 w-auto xl:h-14"/>
             </a>
         </div>
 
-        <div data-navbar class="bg-white lg:bg-transparent pt-36 lg:pt-0 ease-linear duration-300 lg:transition-none top-0 w-screen h-dvh lg:h-auto lg:w-auto invisible opacity-0 fx-open:visible fx-open:opacity-100 lg:visible lg:opacity-100 translate-y-4 fx-open:translate-y-0 lg:translate-y-0 fixed left-0 lg:static z-30 lg:z-auto lg:flex-1 lg:border-x px-5 lg:px-4 border-border border-dashed flex lg:justify-center">
-            <ul class="flex flex-col lg:flex-row lg:items-center gap-3 text-fg-muted">
+        <div data-navbar class="bg-background lg:bg-transparent pt-36 lg:pt-0 ease-linear duration-300 lg:transition-none top-0 w-screen h-dvh lg:h-auto lg:w-auto invisible opacity-0 fx-open:visible fx-open:opacity-100 lg:visible lg:opacity-100 translate-y-4 fx-open:translate-y-0 lg:translate-y-0 fixed left-0 lg:static z-30 lg:z-auto lg:flex-1 lg:border-x px-5 lg:px-4 border-border/60 flex lg:justify-center">
+            <ul class="flex flex-col lg:flex-row lg:items-center gap-3 text-muted-foreground">
                 <li class="flex">
-                    <a href="{{ path('app_firm_index') }}" class="{{ "app_firm_index" == app.current_route ? active_class : ""  }} flex py-1 px-2.5 rounded-global ease-linear duration-300 hover:bg-bg-surface items-center">
-                        {{ 'components.header.links.firm' | trans }}
+                    <a href="{{ path('app_projects_index') }}" class="{{ 'app_projects_index' == app.current_route ? active_class : '' }} flex py-1 px-2.5 rounded-global ease-linear duration-300 hover:bg-muted/20 items-center">
+                        Projects
                     </a>
                 </li>
                 <li class="flex">
-                    <a href="{{ path('app_expertises_index') }}" class="{{ "app_expertises_index" == app.current_route ? active_class : ""  }} flex py-1 px-2.5 rounded-global ease-linear duration-300 hover:bg-bg-surface items-center">
-                        {{ 'components.header.links.expertises' | trans }}
+                    <a href="{{ path('app_contact_index') }}" class="{{ 'app_contact_index' == app.current_route ? active_class : '' }} flex py-1 px-2.5 rounded-global ease-linear duration-300 hover:bg-muted/20 items-center">
+                        Contact
                     </a>
                 </li>
-                <li class="flex">
-                    <a href="{{ path('app_team_index') }}" class="{{ app.current_route in ["app_team_index", "app_team_profile"] ? active_class : ""  }} flex py-1 px-2.5 rounded-global ease-linear duration-300 hover:bg-bg-surface items-center">
-                        {{ 'components.header.links.team' | trans }}
-                    </a>
-                </li>
-                <li class="flex">
-                    <a href="{{ path('app_resources_index') }}" class="{{ app.current_route in ["app_resources_index", "app_resources_show"] ? active_class : ""  }} flex py-1 px-2.5 rounded-global ease-linear duration-300 hover:bg-bg-surface items-center">
-                        {{ 'components.header.links.resources' | trans }}
-                    </a>
-                </li>
-                <li class="flex">
-                    <a href="{{ path("app_contact_index") }}" class="{{ "app_contact_index" == app.current_route ? active_class : ""  }} flex py-1 px-2.5 rounded-global ease-linear duration-300 hover:bg-bg-surface items-center">
-                        {{ 'components.header.links.contact' | trans }}
-                    </a>
-                </li>
-
-                {% if app.user and is_granted("ROLE_ADMIN") %}
-                    <li class="flex">
-                        <a href="{{ path("admin_resources_index") }}" class="flex py-1 px-2.5 rounded-global ease-linear duration-300 hover:bg-bg-surface items-center">
-                            {{ 'components.header.links.dashboard' | trans }}
-                        </a>
-                    </li>
-                {% endif %}
 
                 <li class="flex mt-4 gap-4 flex-col sm:flex-row lg:hidden">
-                    <a href="{{ path("app_contact_index") }}" class="group relative inline-flex btn btn-xl btn-solid-primary justify-center rounded-global py-1 pl-6 pr-14 font-medium">
+                    <a href="{{ path('app_contact_index') }}" class="group relative inline-flex btn btn-xl btn-solid-primary justify-center rounded-global py-1 pl-6 pr-14 font-medium">
                         <span class="z-10 pr-2 text-nowrap"> {{ 'contact.cta.primary'|trans }} </span>
                         <div class="btn-solid-indic bg-primary-700">
                             <div class="mr-3.5 flex items-center justify-center">
@@ -53,7 +30,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="{{ path("app_contact_index") }}" class="group relative inline-flex btn btn-xl btn-solid-gray justify-center rounded-global py-1 pl-6 pr-14 font-medium">
+                    <a href="{{ path('app_contact_index') }}" class="group relative inline-flex btn btn-xl btn-solid-gray justify-center rounded-global py-1 pl-6 pr-14 font-medium">
                         <span class="z-10 pr-2 text-nowrap"> {{ 'contact.cta.secondary'|trans }} </span>
                         <div class="btn-solid-indic bg-bg-muted">
                             <div class="mr-3.5 flex items-center justify-center">
@@ -65,38 +42,7 @@
             </ul>
         </div>
 
-        <div class="flex gap-2 relative z-30 lg:z-auto">
-            <button data-dropdown-trigger data-dropdown-id="language" class="flex items-center h-10 p-2.5 text-fg group">
-                <img src="{{ asset('images/' ~ app.request.locale ~ '.svg') }}" alt="Icon lang" width="50" height="50" class="w-5 h-auto mr-1.5" data-ico/>
-                <span data-text class="flex text-sm uppercase">{{ app.request.locale | u.title }}</span>
-                <twig:ux:icon name="hugeicons:arrow-down-01" class="text-xs ease-linear duration-200 transition-transform group-[[aria-expanded=true]]:rotate-180 iconify" />
-            </button>
-
-            <ul data-language-dropdown id="language" role="menu" data-placement="bottom-middle" class="ui-popper z-100 w-50 opacity-0 invisible scale-95 fx-open:opacity-100 fx-open:visible fx-open:scale-100 text-sm bg-bg border border-border shadow-sm rounded-lg flex flex-col overflow-hidden text-fg ease-linear transition-transform">
-                <li role="menuitem" class="flex w-full">
-                    <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params') | merge({'_locale': 'fr'})) }}" class="flex cursor-pointer py-2 px-4 w-full rounded-global ease-linear duration-300 hover:bg-bg-surface items-center {{ app.request.locale == 'fr' ? 'font-bold underline' : '' }}">
-                        <img data-lang-ico src="{{ asset('images/fr.svg') }}" alt="Icon lang" width="50" height="50" class="w-5 h-auto mr-2"/>
-                        <span class="flex text-sm">{{ 'components.header.languages.fr' | trans }}</span>
-                    </a>
-                </li>
-                <li role="menuitem" class="flex w-full">
-                    <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({'_locale': 'en'})) }}" class="flex cursor-pointer py-2 px-4 w-full rounded-global ease-linear duration-300 hover:bg-bg-surface items-center {{ app.request.locale == 'en' ? 'font-bold underline' : '' }}">
-                        <img data-lang-ico src="{{ asset('images/en.svg') }}" alt="Icon lang" width="50" height="50" class="w-5 h-auto mr-2"/>
-                        <span class="flex text-sm">{{ 'components.header.languages.en' | trans }}</span>
-                    </a>
-                </li>
-            </ul>
-
-{#            <button data-modal-target="search-modal" aria-label="modal recherche" class="size-10 d-flex-place-center rounded-global text-fg bg-bg-surface hover:bg-bg-muted/80 focus:bg-bg-muted">#}
-{#                <twig:ux:icon name="hugeicons:searching" class="iconify" />#}
-{#            </button>#}
-
-            <div class="flex lg:hidden pr-0.5 border-l border-primary-200/60 ix-fx-fixed:border-gray-200/80 -mr-2.5">
-                <button data-nav-trigger class="px-2.5 py-1 relative space-y-2 group hover:bg-bg-muted" aria-label="toggle navbar">
-                    <span class="h-0.5 flex w-6 rounded bg-fg-muted transition duration-300 group-aria-expanded:rotate-45" id="line-1" aria-hidden="true"></span>
-                    <span class="h-0.5 flex w-6 rounded bg-fg-muted transition duration-300 group-aria-expanded:rotate-45" id="line-2" aria-hidden="true"></span>
-                </button>
-            </div>
+    
         </div>
     </nav>
 </header>
