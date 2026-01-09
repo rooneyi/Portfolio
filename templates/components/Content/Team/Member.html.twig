@@ -1,0 +1,27 @@
+{% props member, index = 0 %}
+
+<a href="{{ path('app_team_profile', {id: member.id}) }}" title="{{ member.name }}" class="group overflow-hidden relative">
+    <img
+        class="aspect-square w-full rounded-global object-cover object-top grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:aspect-[1/.9] group-hover:rounded-2xl"
+        src="{{ asset(member.photo) }}"
+        alt="{{ member.name }}"
+        width="826"
+        height="1239"
+    />
+    <div class="px-2 pt-2 sm:pb-0 sm:pt-4">
+        <div class="flex justify-between">
+            <h3 class="text-fg-title text-base font-medium transition-all duration-500 group-hover:tracking-wider">
+                {{ member.name }}
+            </h3>
+            <span class="text-xs">_{{ index|format('%02d') }}</span>
+        </div>
+        <div class="mt-1 flex items-center justify-between">
+          <span class="inline-block translate-y-6 text-sm transition duration-300 group-hover:translate-y-0">
+            {{ member.role }}
+          </span>
+            <span class="before:flex translate-y-8 text-sm tracking-wide transition-all duration-500 group-hover:translate-y-0 group-hover:text-primary">
+               Voir le Profile
+            </span>
+        </div>
+    </div>
+</a>

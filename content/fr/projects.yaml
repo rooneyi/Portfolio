@@ -1,0 +1,214 @@
+summaries:
+    -
+        title: Financement
+        description: Nous offrons une gamme complète de services juridiques visant à aider nos clients à structurer, négocier et exécuter des financements complexes à l'échelle nationale et internationale, tout en gérant les risques juridiques associés à ces transactions.
+    -
+        title: Corporate - M&A
+        description: Nous nous occupons activement des questions juridiques liées à la constitution, à la structuration, à la gouvernance et à la dissolution des sociétés. Nous conseillons les entreprises sur les fusions et acquisitions, les restructurations, les transactions de capitaux et d'autres aspects juridiques des entités commerciales.
+
+    -
+        title: Conformité & veille juridique
+        description: Nous aidons les entreprises à se conformer aux réglementations sectorielles en vigueur, à obtenir et à maintenir des licences opérationnelles, à gérer les risques de non-conformité et à répondre aux exigences réglementaires dans un environnement commercial complexe et en constante évolution.
+
+    -
+        title: Droit social et gestion RH
+        description: Nous accompagnons les entreprises nationales et internationales dans tous les aspects juridiques liés à la gestion de leur personnel, en conformité avec le cadre légal congolais.
+    -
+        title: Ingénierie contractuelle
+        description: Nous assistons nos clients dans l’élaboration d’architectures contractuelles complexes et les accompagnons dans toutes les phases de leurs relations contractuelles, depuis la conception stratégique jusqu’à l’exécution et le règlement des différends éventuels.
+
+    -
+        title: Fiscalité et parafiscalité
+        description: Nous nous distinguons par notre capacité à traduire des problématiques fiscales complexes en solutions concrètes et sécurisées juridiquement, permettant à nos clients de se concentrer sur leur développement tout en maîtrisant leurs risques fiscaux dans un environnement réglementaire en constante mutation.
+
+    -
+        title: Propriété intellectuelle & Industrielle
+        description: En tant que mandataire agrée en République démocratique du Congo, nous offrons un service complet pour sécuriser les innovations et créations de nos clients dans un contexte en pleine mutation digitale.
+    -
+        title: Vie Privée et Protection des Données
+        description: Notre pratique Vie Privée et Protection des Données est reconnue pour son rôle pionnier dans le développement de cette expertise juridique émergente  et pour sa capacité à proposer des solutions innovantes adaptées aux défis spécifiques du marché congolais.
+    -
+        title: Résolution des litiges
+        description: Nous aidons les entreprises et les particuliers à résoudre efficacement leurs différends, que ce soit devant les tribunaux ou par le biais de l'arbitrage et d'autres méthodes alternatives de résolution des conflits.
+    -
+        title: Banque & Finance
+        description: Le secteur de la banque, de la finance et de l'assurance est l'un des plus réglementés du monde des affaires. Nous apportons un soutien juridique à tous les acteurs du secteur, y compris les banques, les institutions financières, les fonds d'investissement, les compagnies d'assurance et les gestionnaires d'actifs, sur toutes les questions juridiques inhérentes à l'industrie.
+
+    -
+        title: Énergie et Hydrocarbures
+        description: Nous fournissons une expertise avérée pour couvrir l'ensemble du processus de valorisation de l'énergie, de la conception du projet à la phase opérationnelle, en passant par le transport, la distribution et la valorisation des actifs à long terme.
+    -
+        title: Mines et Métaux
+        description: Nous conseillons sur le développement de l'infrastructure minière, couvrant tous les aspects juridiques liés à la prospection, au développement, à l'exploration, à la commercialisation et au transport de pratiquement tous les types de minéraux, ainsi qu'à la vente et à l'achat d'actifs miniers importants.
+    -
+        title: Infrastructure et grands projets
+        description: Notre équipe accompagne les parties prenantes des projets d'infrastructure tout au long de leur cycle de vie, du développement à la structuration, en passant par l'acquisition de licences, le financement, la construction, l'exploitation et le contentieux.
+
+    -
+        title: Construction et Immobilier
+        description: Nous accompagnons investisseurs, promoteurs, entrepreneurs et particuliers dans toutes les étapes de leurs projets immobiliers et de construction, en veillant à ce que les aspects juridiques, y compris les réglementations environnementales, soient rigoureusement examinés et gérés.
+    -
+        title: Technologie, Média and Télécoms
+        description: Nous offrons des conseils juridiques stratégiques aux entreprises opérant dans ces secteurs dynamiques. Nos services englobent la réglementation des communications, la protection des données, la cybersécurité et les transactions complexes.
+
+sectors:
+    subtitle: Les secteurs qui façonnent notre expertise
+    title: Secteurs
+    description: Notre cabinet se concentre sur quelques secteurs d'activité dans lesquels il a développé une expertise approfondie afin de fournir des services juridiques de qualité adaptés aux besoins spécifiques de nos clients.
+    items:
+        -
+            title: Banque & Finance
+            description: Le secteur de la banque, de la finance et de l'assurance est l'un des plus réglementés du monde des affaires. Nous apportons un soutien juridique à tous les acteurs du secteur, y compris les banques, les institutions financières, les fonds d'investissement, les compagnies d'assurance et les gestionnaires d'actifs, sur toutes les questions juridiques inhérentes à l'industrie.
+        -
+            title: Énergie et Hydrocarbures
+            description: Nous fournissons une expertise avérée pour couvrir l'ensemble du processus de valorisation de l'énergie, de la conception du projet à la phase opérationnelle, en passant par le transport, la distribution et la valorisation des actifs à long terme.
+        -
+            title: Mines et Métaux
+            description: Nous conseillons sur le développement de l'infrastructure minière, couvrant tous les aspects juridiques liés à la prospection, au développement, à l'exploration, à la commercialisation et au transport de pratiquement tous les types de minéraux, ainsi qu'à la vente et à l'achat d'actifs miniers importants.
+        -
+            title: Infrastructure et grands projets
+            description: Notre équipe accompagne les parties prenantes des projets d'infrastructure tout au long de leur cycle de vie, du développement à la structuration, en passant par l'acquisition de licences, le financement, la construction, l'exploitation et le contentieux.
+        -
+            title: Construction et Immobilier
+            description: Nous accompagnons investisseurs, promoteurs, entrepreneurs et particuliers dans toutes les étapes de leurs projets immobiliers et de construction, en veillant à ce que les aspects juridiques, y compris les réglementations environnementales, soient rigoureusement examinés et gérés.
+        -
+            title: Technologie, Média and Télécoms
+            description: Nous offrons des conseils juridiques stratégiques aux entreprises opérant dans ces secteurs dynamiques. Nos services englobent la réglementation des communications, la protection des données, la cybersécurité et les transactions complexes.
+
+domains:
+    subtitle: Un accompagnement complet sur l’ensemble des enjeux juridiques
+    title: Domaines d’activités
+    items:
+        -
+            title: Financement
+            items:
+                - Structuration et négociation des financements bancaires et de projets, notamment dans les domaines de l'infrastructure, de l'énergie et de l'exploitation minière
+                - Conseil sur les aspects juridiques des contrats de financement de projets, y compris les accords de prêt, les contrats de sûretés, les arrangements de partage des risques ;
+                - Due diligence liée au financement de projets, y compris l'examen des titres de propriété, des permis, des contrats clés, des règlements et des questions environnementales.
+                - Conseil sur des structures de financement complexes, telles que le financement de projets à effet de levier, le financement structuré, les partenariats public-privé (PPP) ;
+                - Assistance à la mise en place de véhicules d'investissement spéciaux pour le financement de projets, tels que les sociétés de projet;
+                - Conseil sur les aspects juridiques des partenariats avec des entités gouvernementales, des agences de développement, des institutions financières internationales et d'autres parties prenantes dans le cadre du financement de projets ;
+                - Représentation dans les litiges liés au financement de projets, y compris les litiges contractuels, les questions de responsabilité, les mesures d'exécution en cas de non-paiement.
+        -
+            title: Corporate, M&A and restructurations
+            items:
+                - Assistance dans les opérations de fusion et d'acquisition, y compris la planification, la négociation, la documentation et la réalisation de ces opérations;
+                - Assistance dans la structuration, la formation et la dissolution de sociétés commerciales, y compris les filiales nationales, les coentreprises et d'autres types de partenariats ;
+                - Conseil sur la conformité réglementaire et les aspects juridiques des questions de gouvernance d'entreprise.
+                - Organisation et tenue des assemblées d'actionnaires et des réunions du conseil d'administration (secrétariat général) ;
+                - Négociation et rédaction des contrats commerciaux, tels que des conventions d'actionnaires, des joint-ventures, des contrats de distribution, des contrats de franchise ;
+                - Conseil sur les questions de restructuration d'entreprise, y compris les scissions, les fusions et les changements de structure.
+                - Représentation dans les litiges liés au droit des sociétés et aux fusions et acquisitions, y compris les litiges post-acquisition, les litiges entre actionnaires ;
+
+        -
+            title: Conformité & veille juridique
+            items:
+                - Conseil en matière de conformité réglementaire, y compris l'interprétation et l'application des lois et réglementations nationales et internationales dans divers secteurs d'activité ;
+                - Assistance à l’obtention et au maintien des licences opérationnelles sectorielles ;
+                - Assistance dans le cadre de transactions transfrontalières impliquant des aspects de conformité et de réglementation, y compris les fusions et acquisitions, les partenariats internationaux et les investissements étrangers.
+                - Conseils en matière de lutte contre le blanchiment d'argent, le financement du terrorisme, la corruption et d'autres questions liées à la conformité financière ;
+                - Représentation des clients dans le cadre d'enquêtes réglementaires et de litiges liés à la conformité
+                - Suivi des évolutions législatives nationales et internationales
+                - Analyse des décisions jurisprudentielles significatives
+                - Monitoring des positions des autorités administratives et de régulation
+                - Alertes en temps réel sur les modifications juridiques critiques
+                - Bulletins périodiques adaptés à votre secteur d’activité
+                - Synthèses analytiques des impacts des changements règlementaires potentiels sur votre entreprise
+
+        -
+            title: Droit social et gestion RH
+            items:
+                - Rédaction des contrats de travail adaptés à vos besoins spécifiques
+                - Sécurisation du recours au placement du personnel par des prestataires externes
+                - Sécurisation des transferts de salariés lors d’opérations de restructuration
+                - Préparation et sécurisation des procédures de licenciement individuel
+                - Assistance dans l’application des sanctions disciplinaires
+                - Assistance lors des négociations des ruptures conventionnelles
+                - Assistance dans l’organisation des élections syndicales et dans la tenue des réunions périodiques obligatoires
+                - Assistance lors des négociations des conventions collectives
+                - Réalisation des audits de conformité sociale
+                - Préparation aux contrôles de l’inspection du travail
+                - Assistance dans la gestion des procédures de licenciement pour motifs économiques
+                - Défense de vos intérêts lors de contentieux devant l’inspection et les juridictions du travail
+
+        -
+            title: Ingénierie contractuelle
+            items:
+                - Élaboration des structures contractuelles adaptées à vos opérations complexes
+                - Cartographie les risques juridiques et opérationnels
+                - Sécurisation des clauses sensibles (responsabilité, propriété intellectuelle, résiliation)
+                - Structuration des montages contractuels multi-juridictionnels
+                - Assistance au cours de l’exécution et de l’évolution des contrats
+                - Sécurisation les avenants et modifications contractuelles
+                - Évaluation de la conformité et l’efficacité des contrats existants
+                - Standardisation et harmonisation des modèles contractuels
+                - Analyse les situations contractuelles précontentieuses
+                - Assistance à la négociation et à la résolution amiable
+                - Défense des intérêts lors des litiges contractuels
+
+        -
+            title: Fiscalité et parafiscalité
+            items:
+                - Sécurisation de l’application des régimes fiscaux spécifiques
+                - Optimisation lors de l’implantation des activités en RDC
+                - Prévention des risques de double imposition
+                - Sécurisation de l’application des conventions fiscales
+                - Structuration fiscale des opérations d’acquisition et de cession
+                - Assistance lors des contrôles fiscaux
+                - Négociation avec l’administration fiscale en cas de litige
+                - Sécurisation de vos obligations déclaratives en matière de parafiscalité
+                - Analyse de l’impact des réformes fiscales
+                - Élaboration des stratégies de contentieux fiscal
+        -
+            title: Propriété intellectuelle & Industrielle
+            items:
+                - Enregistrement et renouvellement de marques
+                - Dépôt et suivi des brevets d’invention
+                - Protection des droits d’auteur et droits voisins
+                - Enregistrement des dessins et modèles industriels
+                - Sécurisation des noms de domaine et des actifs numériques
+                - Stratégies de protection des secrets d’affaires et du savoir-faire
+                - Rédaction et négociation de contrats de licence et de transfert de technologie
+                - Structuration juridique des franchises commerciales
+                - Due diligence propriété intellectuelle lors d’opérations d’acquisition
+                - Actions en contrefaçon et en concurrence déloyale
+                - Accompagnement des entreprises technologiques et startups innovantes
+
+        -
+            title: Vie Privée et Protection des Données
+            items:
+                - Accompagnement dans la mise en conformité avec l’ordonnance-loi n° 23/010 du 13 Mars 2023 portant Code du numérique
+                - Alignement avec les standards internationaux (RGPD européen, Union africaine)
+                - Cartographie des traitements de données et analyse d’impact
+                - Élaboration de politiques de confidentialité et de protection des données
+                - Accompagnement dans les relations avec l’Autorité de Régulation des Postes, des Télécommunications et des Technologies de l’Information et de la Communication (ARPTIC)
+                - Intégration de la privacy by design dans les projets d’innovation
+                - Due diligence protection des données lors des opérations de M&A
+                - Accompagnement des transferts internationaux de données
+                - Assistance lors des contrôles réglementaires
+                - Représentation dans les litiges relatifs à la protection des données
+                - Médiation avec les personnes concernées en cas de litige
+
+        -
+            title: Résolution des litiges
+            items:
+                - Représentation de clients devant les cours et tribunaux congolais dans le cadre de litiges civils et commerciaux, tels que des litiges contractuels, des litiges relatifs au recouvrement de créances, les litiges individuels du travail et des litiges en matière de responsabilité ;
+                - Représentation de clients devant les tribunaux administratifs pour contester des décisions d'autorités administratives, des réglementations ou des politiques publiques ;
+                - Assistance en recherches juridiques et en rédaction des mémoires pour soutenir les cabinets d'avocats internationaux sur des questions de droit local dans le cadre de procédures d'arbitrage international ;
+                - Représentation de clients dans des procédures d'arbitrage, devant des tribunaux arbitraux institutionnels ou ad hoc, pour résoudre des litiges commerciaux et des différends en matière d'investissement ;
+                - Assistance à la médiation et à d'autres formes de résolution alternative des litiges afin de parvenir à des solutions négociées en dehors des tribunaux ;
+                - Assistance à l'exécution des décisions de justice et des sentences arbitrales au niveau national
+
+approaches:
+    -
+        title: Analyse contextuelle approfondie
+        description: Chaque dossier est abordé dans sa globalité, en tenant compte des dimensions juridiques, économiques, politiques et culturelles.
+    -
+        title: Solutions sur mesure
+        description: Nous rejetons les approches standardisées au profit de stratégies juridiques adaptées aux objectifs spécifiques de chaque client
+    -
+        title: Transfert de compétences
+        description: Nous travaillons en étroite collaboration avec les équipes internes de nos clients pour renforcer leurs capacités juridiques
+    -
+        title: Anticipation & gestion des risques
+        description: Notre connaissance du terrain nous permet d’identifier précocement les zones de risque et de proposer des mécanismes préventifs adaptés

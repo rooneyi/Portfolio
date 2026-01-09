@@ -1,0 +1,83 @@
+<section class="relative pt-16 pb-2">
+    <twig:Pattern:Top />
+
+    <div class="relative max-w-7xl w-full mx-auto px-4 sm:px-6 xl:px-2 grid">
+        <div class="flex flex-col flex-1 items-center text-center">
+            <nav class="flex px-5 py-3 bg-bg-surface text-fg-muted rounded-global" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                    <li class="inline-flex items-center">
+                        <a href="{{ path("index") }}" class="inline-flex items-center text-sm font-medium hover:text-primary">
+                            <twig:ux:icon name="hugeicons:home-01" class="me-2.5 iconify" />
+                            {{ "components.breadcrumb.home" | trans }}
+                        </a>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <twig:ux:icon name="hugeicons:arrow-right-01" class="mx-1 iconify" />
+                            <span class="ms-1 text-sm font-medium text-fg-muted">
+                      {{ "components.breadcrumb.expertises" | trans }}
+                    </span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+            <h1 class="mt-5 text-4xl sm:text-5xl xl:text-6xl/[1.15] text-transparent bg-clip-text bg-gradient-to-tr from-primary-950 via-gray-700 to-gray-900 mx-auto max-w-4xl text-balance">
+                {{ 'expertises.sections.hero.title' | trans }}
+            </h1>
+            <p class="mt-8 flex text-fg-subtext max-w-md mx-auto text-center text-fg">
+                {{ 'expertises.sections.hero.subtitle' | trans }}
+            </p>
+        </div>
+
+        {#<div class="relative grid w-full">
+            <div data-slide-testimonials class="mt-16 swiper w-full p-1 bg-bg-surface/30 border border-border/40 shadow-lg shadow-gray-50/50 rounded-global">
+                <div class="swiper-wrapper w-full">
+                    <div class="swiper-slide">
+                        <div class="group [perspective:1000px] w-full h-72 md:h-80 xl:h-96">
+                            <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                                <div class="absolute inset-0 backface-hidden">
+                                    <img
+                                        class="w-full h-full object-cover rounded-global"
+                                        src="https://alt.tailus.io/images/team/member-one.webp"
+                                        alt="team member"
+                                    />
+                                </div>
+
+                                <div
+                                    class="absolute inset-0 bg-secondary-900 text-white rounded-xl [transform:rotateY(180deg)] backface-hidden"
+                                >
+                                    <div
+                                        class="size-full p-5 overflow-hidden overflow-y-auto flex flex-col justify-end"
+                                    >
+                                        <p class="text-sm font-light text-gray-300">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Perferendis reiciendis magni magnam beatae
+                                            minima quam dolorem facere error eum, hic mollitia
+                                            delectus ratione dolorum. Temporibus rem praesentium
+                                            ducimus reiciendis obcaecati.
+                                        </p>
+                                        <div
+                                            class="mt-5 border-t pt-2 border-gray-600 border-dotted flex flex-col"
+                                        >
+                                            <p class="font-medium text-white pt-2">John Doe</p>
+                                            <span class="text-sm font-light text-gray-300">
+                              CEO BugOverflow
+                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button data-com-prev aria-label="Go to prev slide" class="z-20 absolute top-1/2 -translate-y-1/2 -left-4 btn btn-icon-sm sm:btn-icon-md bg-white hover:bg-primary hover:text-white rounded-global shadow-sm shadow-gray-50 border border-border">
+                <twig:ux:icon name="hugeicons:arrow-left-01" class="iconify" />
+            </button>
+            <button data-com-next aria-label="Go to prev slide" class="z-20 absolute top-1/2 -translate-y-1/2 -right-4 btn btn-icon-sm sm:btn-icon-md bg-white hover:bg-primary hover:text-white rounded-global shadow-sm shadow-gray-50 border border-border">
+                <twig:ux:icon name="hugeicons:arrow-right-01" class="iconify" />
+            </button>
+        </div>#}
+    </div>
+</section>

@@ -1,0 +1,62 @@
+{% props sectors, domains %}
+
+<section class="relative mt-28 xl:mt-32 max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-8 xl:px-5">
+    <div class="grid md:grid-cols-2 gap-1 p-1 bg-bg-surface/30 border border-border/40 shadow-lg shadow-gray-50/50 rounded-global">
+        <div class="flex-1 flex flex-col p-4 sm:p-6 xl:p-8 border border-border-strong/40 shadow-lg shadow-gray-50/50 rounded-global bg-bg">
+            <span class="head-title flex w-max">
+              <span class="relative px-3 py-0.5 z-4 text-secondary text-sm rounded">{{ sectors.title }}</span>
+            </span>
+            <h2 class="text-fg-title text-3xl/snug lg:text-4xl/snug font-medium text-balance mt-5 max-w-2xl">
+                {{ sectors.subtitle }}
+            </h2>
+            <p class="text-fg-muted mt-7">
+                {{ sectors.description }}
+            </p>
+            <div data-app-accordion data-accordion-type="single" class="mt-7 space-y-1 p-1 bg-bg-surface/30 border border-border/40 shadow-lg shadow-gray-50/50 rounded-global text-fg">
+                {% for i, item in sectors.items %}
+                    <div data-accordion-item data-accordion-value="secteur-{{ i }}" class="border border-border-strong/40 shadow-lg shadow-gray-50/50 rounded-global bg-bg">
+                        <button data-accordion-trigger aria-label="toggle button" class="flex w-full items-start justify-between px-2 py-1 gap-3">
+                            <div class="flex-1 text-left flex items-start gap-2">
+                                <twig:ux:icon name="hugeicons:tick-double-01" class="text-secondary iconify" />
+                                <span class="flex-1">{{ item.title }}</span>
+                            </div>
+                            <twig:ux:icon name="hugeicons:plus-sign" class="mt-0.5 text-xs text-secondary in-fx-open:rotate-45 ease-linear transition-transform duration-300 iconify" />
+                        </button>
+                        <div aria-hidden="true" data-state="open" data-accordion-content class="text-fg-muted duration-200 ease-linear h-0 fx-open:h-auto overflow-hidden">
+                            <p class="px-2 border-t border-border border-dashed py-2">
+                                {{ item.description  }}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="flex-1 flex flex-col p-4 sm:p-6 xl:p-8 border border-border-strong/40 shadow-lg shadow-gray-50/50 rounded-global bg-bg">
+            <span class="head-title flex w-max">
+              <span class="relative px-3 py-0.5 z-4 text-secondary text-sm rounded">{{ domains.title }}</span>
+            </span>
+            <h2 class="text-fg-title text-3xl/snug lg:text-4xl/snug font-medium text-balance mt-5 max-w-2xl">{{ domains.subtitle }}</h2>
+
+            <div data-app-accordion data-accordion-type="single" class="mt-7 space-y-1 p-1 bg-bg-surface/30 border border-border/40 shadow-lg shadow-gray-50/50 rounded-global text-fg">
+                {% for i, item in domains.items %}
+                    <div data-accordion-item data-accordion-value="domaine-{{ i }}" class="border border-border-strong/40 shadow-lg shadow-gray-50/50 rounded-global bg-bg">
+                        <button data-accordion-trigger aria-label="toggle button" class="flex w-full items-start justify-between px-2 py-1 gap-3">
+                            <div class="flex-1 text-left flex items-start gap-2">
+                                <twig:ux:icon name="hugeicons:folder-check" class="text-secondary" />
+                                <span class="flex-1">{{ item.title }}</span>
+                            </div>
+                            <twig:ux:icon name="hugeicons:plus-sign" class="mt-0.5 text-xs text-secondary in-fx-open:rotate-45 ease-linear transition-transform duration-300" />
+                        </button>
+                        <div aria-hidden="true" data-state="open" data-accordion-content class="text-fg-muted duration-200 ease-linear h-0 fx-open:h-auto overflow-hidden">
+                            {% for _, p in item.items %}
+                                <p class="px-2 border-t border-border border-dashed py-2">
+                                    {{ p }}
+                                </p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

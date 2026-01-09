@@ -1,58 +1,52 @@
-<section class="relative py-32 bg-background overflow-hidden">
-    <div class="max-w-5xl mx-auto px-6 text-center">
+<section id="home" class="relative overflow-hidden bg-background py-24">
+    <twig:Pattern:Top />
+    <twig:Pattern:Bottom />
 
-        <!-- Subtitle -->
-        <p class="text-sm text-muted-foreground mb-4">
-            About me · Backend & Architecture · Open Source Enthusiast
-        </p>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-2 items-center">
+            <div class="space-y-6">
+                <p class="text-sm text-muted-foreground">
+                    About me · Backend & Architecture · Open Source Enthusiast
+                </p>
 
-        <!-- Title -->
-        <h1 class="text-5xl md:text-6xl font-serif font-medium tracking-tight text-foreground mb-12">
-            Build the reliable,<br class="hidden md:block">
-            not just the visible
-        </h1>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-medium tracking-tight text-foreground">
+                    Build the reliable,<br class="hidden md:block">
+                    not just the visible
+                </h1>
 
-        <p class="mb-8 text-lg text-muted-foreground">
-            I am Rooney Kalumba. Passionate about open source for several months, I enjoy contributing and learning from the community.<br>
-            I also love reading and football.
-        </p>
+                <p class="text-base md:text-lg text-muted-foreground">
+                    I am Rooney Kalumba. Passionate about open source for several months, I enjoy contributing and learning from the community.
+                    I also love reading and football.
+                </p>
 
-        <!-- Image card -->
-        <div class="relative flex justify-center mb-12">
-            <div class="relative rounded-2xl overflow-hidden shadow-lg">
-                <img
-                    src="/assets/images/rooney1.jpeg"
-                    alt="Rooney portrait"
-                    class="h-[420px] w-[300px] object-cover grayscale"
-                />
+                <div class="flex flex-wrap items-center gap-4 pt-4">
+                    <a
+                        href="#projects"
+                        class="inline-flex items-center rounded-full bg-gray-900 px-6 py-3 text-sm font-medium text-white hover:bg-gray-800 transition"
+                    >
+                        View projects
+                    </a>
+
+                    <a
+                        href="#about"
+                        class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition"
+                    >
+                        Why I build this way
+                        <span class="text-lg">↘</span>
+                    </a>
+                </div>
             </div>
 
-            <!-- Decorative dots (subtle) -->
-            <div class="absolute -left-24 top-1/2 -translate-y-1/2 grid grid-cols-4 gap-4 opacity-10">
-                <div class="h-4 w-4 rounded-full bg-gray-400"></div>
-                <div class="h-4 w-4 rounded-full bg-gray-400"></div>
-                <div class="h-4 w-4 rounded-full bg-gray-400"></div>
-                <div class="h-4 w-4 rounded-full bg-gray-400"></div>
+            <div class="relative flex justify-center lg:justify-end">
+                <div class="relative max-w-sm rounded-2xl overflow-hidden shadow-lg">
+                    <img
+                        src="/assets/images/rooney1.jpeg"
+                        alt="Rooney portrait"
+                        class="h-[420px] w-full object-cover grayscale"
+                    />
+                </div>
             </div>
         </div>
-
-        <!-- Actions -->
-        <div class="flex justify-center items-center gap-6">
-            <a
-                href="#projects"
-                class="inline-flex items-center rounded-full bg-gray-900 px-6 py-3 text-sm font-medium text-white hover:bg-gray-800 transition"
-            >
-                View projects
-            </a>
-
-            <a
-                href="#about"
-                class="text-sm text-muted-foreground hover:text-foreground transition flex items-center gap-2"
-            >
-                Why I build this way
-                <span class="text-lg">↘</span>
-            </a>
-        </div>
-
     </div>
 </section>
+                Why I build this way

@@ -1,0 +1,29 @@
+{% props resource %}
+
+<div class="group relative">
+    <div class="rounded-global w-full aspect-standard-tv overflow-hidden">
+        <img
+            src="{{ vich_uploader_asset(resource, "coverFile") }}"
+            alt="{{ resource.title }}"
+            width="2000"
+            height="1333"
+            class="size-full object-cover object-top group-hover:scale-110 ease-linear transition-transform duration-500"
+        />
+    </div>
+    <div class="mt-2">
+        <div class="flex items-center gap-x-2 text-fg-muted">
+            <p class="text-xs capitalize" title="{{ resource.category.value }}">{{ resource.category.value }}</p>
+            <span>·</span>
+            <p class="text-xs">
+                <time datetime="{{ resource.createdAt | date("c") }}">
+                    {{ resource.createdAt | date }}
+                </time>
+            </p>
+        </div>
+        <a href="{{ path("app_resources_show", {slug: resource.slug, id: resource.id}) }}" class="before:absolute before:inset-0 mt-1">
+            <h3 class="text-fg-title group-hover:text-primary underline decoration-transparent group-hover:decoration-current ease-linear transition-all duration-300 line-clamp-2">
+                {{ resource.title }}
+            </h3>
+        </a>
+    </div>
+</div>

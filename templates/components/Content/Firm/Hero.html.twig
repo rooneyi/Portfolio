@@ -1,0 +1,25 @@
+<section class="relative pt-16 pb-2">
+    <twig:Pattern:Top />
+
+    <div class="relative max-w-7xl w-full mx-auto px-4 sm:px-6 xl:px-2 flex flex-col">
+        <div class="flex flex-col md:flex-row gap-x-20 gap-y-12 flex-1 md:items-end">
+            <div class="flex-1">
+                <twig:Breadcrumb data-reveal data-direction="top" class="flex px-5 py-3 w-max bg-bg-surface text-fg-muted rounded-global">
+                    <twig:Breadcrumb:Item title="{{ 'components.breadcrumb.firm' | trans}}" />
+                </twig:Breadcrumb>
+
+                <h1 data-reveal data-direction="top" data-delay="0.05" class="flex-1 mt-5 text-4xl sm:text-5xl xl:text-6xl/[1.15] text-transparent bg-clip-text bg-gradient-to-tr from-primary-950 via-gray-700 to-gray-900 max-w-4xl text-balance">
+                    {{ 'firm.sections.hero.title'|trans }}
+                </h1>
+            </div>
+            <div class="relative flex gap-4 flex-wrap max-w-max">
+                <twig:Button data-scale-slide data-direction="left" data-delay="0.15" href="{{ path("app_expertises_index") }}" as="a">
+                    {{ 'components.breadcrumb.expertises' | trans }}
+                </twig:Button>
+                <twig:Button data-scale-slide data-direction="right" data-delay="0.15" href="{{ path("app_team_index") }}" as="a" variant="gray">
+                    {{ 'components.breadcrumb.team' | trans }}
+                </twig:Button>
+            </div>
+        </div>
+    </div>
+</section>
