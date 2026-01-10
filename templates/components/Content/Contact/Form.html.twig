@@ -1,5 +1,4 @@
-<section class="relative max-w-6xl w-full mx-auto px-4 sm:px-6 md:px-8 xl:px-5 flex flex-col md:flex-row md:items-center gap-16 mb-20 mt-8">
-    <div class="md:w-1/2 w-full overflow-hidden relative bg-bg border border-border-strong/40 shadow-lg shadow-gray-50/50 rounded-global py-8 md:py-10 lg:py-16 px-6 md:px-8">
+    <div class="w-full overflow-hidden relative bg-bg border border-border-strong/40 shadow-lg shadow-gray-50/50 rounded-global py-8 md:py-10 lg:py-16 px-6 md:px-8">
         {{ form_start(form, {attr: {class: "relative w-full " ~ (form.vars.submitted ? 'is-submitted' : ''), novalidate: 'novalidate'}}) }}
         <div class="mb-6 pb-4 border-b border-border">
             <h2 class="font-medium text-lg text-fg-title">
@@ -9,27 +8,27 @@
         <div class="grid gap-4 md:grid-cols-2">
             <div class="flex flex-col space-y-2">
                 {{ form_label(form.name, null, { label_attr: { class: 'text-sm text-fg' } }) }}
-                {{ form_widget(form.name, { attr: { class: 'w-full ui-form-base ui-form-input ui-form-input-md shadow border rounded-md text-sm text-fg border-border-input ' ~ (form.vars.submitted and not form.name.vars.valid ? 'is-invalid' : '') } }) }}
+                {{ form_widget(form.name, { attr: { class: 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ' ~ (form.vars.submitted and not form.name.vars.valid ? 'is-invalid' : '') } }) }}
                 <div class="ui-form-error">{{ form_errors(form.name) }}</div>
             </div>
             <div class="flex flex-col space-y-2">
                 {{ form_label(form.email, null, { label_attr: { class: 'text-sm text-fg' } }) }}
-                {{ form_widget(form.email, { attr: { class: 'w-full ui-form-base ui-form-input ui-form-input-md shadow border rounded-md text-sm text-fg border-border-input ' ~ (form.vars.submitted and not form.email.vars.valid ? 'is-invalid' : '') } }) }}
+                {{ form_widget(form.email, { attr: { class: 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ' ~ (form.vars.submitted and not form.email.vars.valid ? 'is-invalid' : '') } }) }}
                 <div class="ui-form-error">{{ form_errors(form.email) }}</div>
             </div>
             <div class="flex flex-col space-y-2 col-span-full">
                 {{ form_label(form.phone, null, { label_attr: { class: 'text-sm text-fg' } }) }}
-                {{ form_widget(form.phone, { attr: { class: 'w-full ui-form-base ui-form-input ui-form-input-md shadow border rounded-md text-sm text-fg border-border-input ' ~ (form.vars.submitted and not form.phone.vars.valid ? 'is-invalid' : '') } }) }}
+                {{ form_widget(form.phone, { attr: { class: 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ' ~ (form.vars.submitted and not form.phone.vars.valid ? 'is-invalid' : '') } }) }}
                 <div class="ui-form-error">{{ form_errors(form.phone) }}</div>
             </div>
             <div class="flex flex-col space-y-2 col-span-full">
                 {{ form_label(form.subject, null, { label_attr: { class: 'text-sm text-fg' } }) }}
-                {{ form_widget(form.subject, { attr: { class: 'w-full ui-form-base ui-form-input ui-form-input-md shadow border rounded-md text-sm text-fg border-border-input ' ~ (form.vars.submitted and not form.subject.vars.valid ? 'is-invalid' : '') } }) }}
+                {{ form_widget(form.subject, { attr: { class: 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ' ~ (form.vars.submitted and not form.subject.vars.valid ? 'is-invalid' : '') } }) }}
                 <div class="ui-form-error">{{ form_errors(form.subject) }}</div>
             </div>
             <div class="flex flex-col space-y-2 col-span-full">
                 {{ form_label(form.message, null, { label_attr: { class: 'text-sm text-fg' } }) }}
-                {{ form_widget(form.message, { attr: { class: 'w-full ui-form-base ui-form-input ui-form-input-md shadow border rounded-md text-fg h-20 border-border-input ' ~ (form.vars.submitted and not form.message.vars.valid ? 'is-invalid' : '') } }) }}
+                {{ form_widget(form.message, { attr: { class: 'w-full min-h-[140px] rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-y ' ~ (form.vars.submitted and not form.message.vars.valid ? 'is-invalid' : '') } }) }}
                 <div class="ui-form-error">{{ form_errors(form.message) }}</div>
             </div>
         </div>
@@ -37,10 +36,4 @@
         <twig:Button type="submit" class="mt-8" icon="hugeicons:sent-02">{{ 'contact.sections.form.send' | trans }}</twig:Button>
         {{ form_end(form) }}
     </div>
-    <div class="flex-1 lg:pl-14 flex flex-col items-start text-left">
-        <h2 class="text-xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-tr from-primary-950 via-gray-700 to-gray-900">
-            {{ 'contact.sections.hero.secondary' | trans }}
-        </h2>
-        <twig:Button href="https://calendly.com/salvatrice-bahindwa-legalterlaw" target="_blank" class="w-max mt-8" as="a" variant="secondary">Discutons en visio</twig:Button>
-    </div>
-</section>
+

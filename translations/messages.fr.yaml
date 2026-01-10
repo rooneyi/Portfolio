@@ -2,3 +2,11 @@ home:
     meta:
         title: "Bienvenue sur notre site"
         description: "Découvrez nos services et qui est rooney."
+
+contact:
+    sections:
+        hero:
+            title: "Restons en contact"
+            primary: "M'écrire un message"
+        form:
+            send: "Envoyer le message"

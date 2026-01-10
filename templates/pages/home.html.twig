@@ -1,14 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}rooney.tech{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block body %}
 <div class="min-h-screen bg-background">
-    {% include 'components/NavBar.html.twig' %}
 
-    <main class="space-y-24">
+    <main>
+        <twig:Pattern:Background />
         <twig:AboutHero />
-
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
             <div id="about"></div>
             <twig:Hero />
@@ -17,7 +16,6 @@
             <twig:Project projects="{{ projects }}" />
             <twig:Missions />
             <twig:Contact />
-            <twig:Footer />
         </section>
     </main>
 </div>

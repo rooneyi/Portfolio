@@ -14,7 +14,7 @@
                             class="h-[420px] w-full object-cover grayscale"
                         />
                     </div>
-                    <div class="mt-2 pt-4 flex flex-wrap gap-3 border-t border-border/60">
+                    <div class="mt-2 pt-4 flex flex-wrap gap-3  border-border/60">
                         <a
                             href="https://github.com/rooneyi"
                             target="_blank"
@@ -45,11 +45,11 @@
             </div>
 
             <div class="space-y-6 order-2 lg:order-1">
-                <p class="text-sm text-muted-foreground">
+                <div class="inline-flex items-center rounded-full border border-accent/40 bg-accent/25 px-3 py-1 text-[11px] font-semibold text-secondary">
                     About me · Backend & Architecture · Open Source Enthusiast
-                </p>
+                </div>
 
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-medium tracking-tight text-foreground">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-medium tracking-tight text-secondary drop-shadow-md">
                     Build the reliable,<br class="hidden md:block">
                     not just the visible
                 </h1>
@@ -62,17 +62,17 @@
                 <div class="flex flex-wrap items-center gap-4 pt-4">
                     <a
                         href="{{ path('app_cv_download') }}"
-                        class="inline-flex items-center rounded-full bg-gray-900 px-6 py-3 text-sm font-medium text-white hover:bg-gray-800 transition"
+                        class="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-sky-500 transition"
                     >
                         Download CV
                     </a>
 
                     <a
                         href="#about"
-                        class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition"
+                        class="flex items-center gap-2 text-sm text-secondary/70 hover:text-secondary transition"
                     >
                         Why I build this way
-                        <span class="text-lg">↘</span>
+                        <span class="text-lg text-accent/70">↘</span>
                     </a>
                 </div>
             </div>

@@ -1,0 +1,7 @@
+contact:
+  sections:
+    hero:
+      title: "Stay connected"
+      primary: "Send me a message"
+    form:
+      send: "Send message"
