@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+<div class="flex min-h-screen items-center justify-center bg-background py-12">
+    <div class="w-full max-w-md">
+        <twig:Card class="rounded-xl overflow-hidden">
+            <twig:Card:Header class="py-6">
+                <twig:Card:Title class="text-xl">Connexion</twig:Card:Title>
+            </twig:Card:Header>
+            <twig:Card:Content class="pt-0">
+                {% if error %}
+                    <div class="mb-4 text-destructive bg-destructive/10 border border-destructive/20 rounded px-4 py-2 text-sm">
+                        {{ error.messageKey|trans(error.messageData, 'security') }}
+                    </div>
+                {% endif %}
+                {% if app.user %}
+                    <div class="mb-3 text-muted-foreground text-sm">
+                        Connecté en tant que {{ app.user.userIdentifier }}, <a href="{{ logout_path() }}" class="underline hover:text-foreground">Déconnexion</a>
+                    </div>
+                {% endif %}
+                <form method="post" class="space-y-6">
+                    <div>
+                        <label for="inputEmail" class="block mb-1 text-sm font-medium text-foreground">Email</label>
+                        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="block w-full rounded-md border border-border bg-background px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50" autocomplete="email" required autofocus>
+                    </div>
+                    <div>
+                        <label for="inputPassword" class="block mb-1 text-sm font-medium text-foreground">Mot de passe</label>
+                        <input type="password" name="password" id="inputPassword" class="block w-full rounded-md border border-border bg-background px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50" autocomplete="current-password" required>
+                    </div>
+                    <input type="hidden" name="_csrf_token" data-controller="csrf-protection" value="{{ csrf_token('authenticate') }}">
+                    <twig:Button size="lg" as="button" type="submit" class="w-full">Connexion</twig:Button>
+                </form>
+            </twig:Card:Content>
+        </twig:Card>
+    </div>
+</div>
+{% endblock %}

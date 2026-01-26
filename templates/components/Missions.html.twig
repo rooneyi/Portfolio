@@ -1,0 +1,133 @@
+<section class="relative py-20 bg-muted/30">
+    <div class="max-w-4xl mx-auto px-6 flex flex-col items-center justify-center">
+
+        <!-- Title -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-semibold text-foreground mb-2">
+                Collaborations
+            </h2>
+            <p class="text-sm text-muted-foreground">
+                Open source and private collaborations with individuals and organizations I’ve worked with recently.
+            </p>
+        </div>
+
+        <!-- Avatars container -->
+        <div id="contributions-list" class="relative flex items-center justify-center"></div>
+
+    </div>
+</section>
+
+<style>
+/* Avatars row */
+.contribution-avatars {
+    display: flex;
+    align-items: center;
+}
+
+/* Avatar link */
+.contribution-avatars a {
+    position: relative;
+    margin-left: -14px;
+    transition: transform 0.2s ease, z-index 0.2s ease;
+    z-index: 1;
+}
+
+.contribution-avatars a:first-child {
+    margin-left: 0;
+}
+
+.contribution-avatars a:hover {
+    z-index: 10;
+    transform: scale(1.15);
+}
+
+/* Avatar image */
+.contribution-avatars img {
+    width: 44px;
+    height: 44px;
+    border-radius: 9999px;
+    border: 2px solid hsl(var(--background));
+    background: #fff;
+}
+
+/* Tooltip */
+.contribution-avatars a::after {
+    content: attr(data-name);
+    position: absolute;
+    top: -44px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.contribution-avatars a::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.contribution-avatars a:hover::after,
+.contribution-avatars a:hover::before {
+    opacity: 1;
+}
+</style>
+
+<script>
+const containerMissions = document.getElementById('contributions-list');
+
+async function fetchContributedRepos() {
+    const res = await fetch('/api/github/contributions');
+    let repos = await res.json();
+
+    // Exclure tes propres repos
+    repos = repos.filter(repo => repo.owner?.login !== 'rooneyi');
+
+    // Limite à 4 contributions
+    repos = repos.slice(0, 6);
+
+    if (repos.length === 0) {
+        containerMissions.innerHTML =
+            '<p class="text-sm text-muted-foreground">No recent contributions.</p>';
+        return;
+    }
+
+    const avatarsRow = document.createElement('div');
+    avatarsRow.className = 'contribution-avatars';
+
+    repos.forEach(repo => {
+        const owner = repo.owner;
+
+        const avatar = document.createElement('a');
+        avatar.href = repo.html_url;
+        avatar.target = '_blank';
+        avatar.rel = 'noopener';
+        avatar.setAttribute('data-name', owner.login);
+
+        avatar.innerHTML = `
+            <img src="${owner.avatar_url}" alt="${owner.login}" />
+        `;
+
+        avatarsRow.appendChild(avatar);
+    });
+
+    containerMissions.innerHTML = '';
+    containerMissions.appendChild(avatarsRow);
+}
+
+fetchContributedRepos();
+</script>

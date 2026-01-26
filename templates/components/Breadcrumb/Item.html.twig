@@ -1,0 +1,19 @@
+{% props title, icon = "hugeicons:arrow-right-01", href = null, primary = false %}
+
+{% if href %}
+    <li class="inline-flex items-center">
+        <a href="{{ href }}" class="inline-flex items-center text-sm font-medium hover:text-primary">
+            <twig:ux:icon name="{{ icon }}" class="me-2.5 iconify" />
+            {{ title }}
+        </a>
+    </li>
+{% else %}
+    <li aria-current="page">
+        <div class="flex items-center">
+            <twig:ux:icon name="{{ icon }}" class="mx-1 iconify" />
+            <span class="ms-1 text-sm font-medium {{ primary ? "text-primary" : " text-fg-muted" }}">
+                {{ title }}
+            </span>
+        </div>
+    </li>
+{% endif %}

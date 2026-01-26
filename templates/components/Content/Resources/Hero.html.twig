@@ -1,0 +1,45 @@
+{% props resources = [] %}
+
+<section class="relative pt-4 pb-24">
+    <div class="relative max-w-7xl w-full grid mx-auto px-4 sm:px-6 xl:px-2 min-h-[calc(100dvh-5rem)] md:min-h-[650px]">
+
+        <div data-resources-swiper class="swiper w-full h-full rounded-global">
+            <div class="w-full swiper-wrapper h-full flex rounded-global">
+                {% for resource in resources %}
+                    <article class="swiper-slide relative h-full">
+                        <a href="{{ path("app_resources_show", {slug: resource.slug, id: resource.id}) }}" class="relative w-full min-h-max h-full px-5 pt-28 pb-10 sm:pb-16 sm:px-16 lg:px-20 group rounded-global overflow-hidden flex items-end">
+                            <img data-ress-sub-image src="{{ vich_uploader_asset(resource) }}" alt="{{ resource.title }}" width="2000" height="1333" class="absolute top-0 left-0 size-full object-cover object-top group-hover:scale-110 ease-linear transition-transform duration-500"/>
+                            <span class="absolute inset-0 bg-gradient-to-br from-secondary-950"></span>
+                            <div class="max-w-2xl flex flex-col relative">
+                                <span class="text-primary-200 font-medium" data-ress-sub-header>
+                                    {{ resource.category.value }}
+                                </span>
+                                <h1 data-ress-title class="text-white text-2xl md:text-3xl line-clamp-3 mt-8">
+                                    {{ resource.title }}
+                                </h1>
+                                <p data-ress-description class="mt-8 text-gray-50 max-w-md line-clamp-2">
+                                    {{ resource.excerpt }}
+                                </p>
+                                <div data-ress-btns class="mt-16 flex flex-col pt-5 w-max relative before:absolute before:left-0 before:top-0 before:w-8 before:h-0.5 before:rounded-global before:bg-white">
+                                    <span class="text-white font-medium">LegalterLaw</span>
+                                    <span class="text-primary-200 text-sm">
+                                        {{ resource.createdAt | date }}
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 flex right-10 gap-2 items-center z-20">
+            <button data-resources-prev aria-label="Go to prev slide" class="btn btn-icon-sm sm:btn-icon-md bg-white hover:bg-primary hover:text-white rounded-global">
+                <twig:ux:icon name="hugeicons:arrow-left-01" class="iconify" />
+            </button>
+            <button data-resources-next aria-label="Go to prev slide" class="btn btn-icon-sm sm:btn-icon-md bg-white hover:bg-primary hover:text-white rounded-global">
+                <twig:ux:icon name="hugeicons:arrow-right-01" class="iconify" />
+            </button>
+        </div>
+    </div>
+</section>

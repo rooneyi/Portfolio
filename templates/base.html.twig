@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}{% endblock %}| RooneyKalumba</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body {{ stimulus_controller("swiper flexilla animation sticky") }} class="font-sans w-full overflow-hidden overflow-y-auto lg:overflow-y-auto min-h-screen">
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="z-70 fixed top-0 mt-4 right-8 px-6 py-3 rounded-lg shadow-lg text-white font-semibold text-right bg-green-600/90 animate-fade-in-out flash-message">
+                    {{ message }}
+                </div>
+
+        <script>
+            window.addEventListener('DOMContentLoaded', function() {
+                setTimeout(function() {
+                    document.querySelectorAll('.flash-message').forEach(function(el) {
+                        el.style.display = 'none';
+                    });
+                }, 15000);
+            });
+        </script>
+            {% endfor %}
+        {% endfor %}
+        <twig:Header />
+
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+
+        <twig:Footer />
+    </body>
+</html>

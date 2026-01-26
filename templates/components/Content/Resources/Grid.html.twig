@@ -1,0 +1,77 @@
+{% props resources, form %}
+
+<section data-controller="flexilla" class="relative max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-8 xl:px-5 flex flex-col mt-20">
+    <div class="w-full border-b border-border-strong border-dashed pb-4 flex justify-between">
+        <span class="head-title h-max flex w-max">
+            <span class="relative px-3 py-0.5 z-4 text-secondary text-sm rounded">
+                {{ 'resources.sections.grid.title' | trans }}
+            </span>
+        </span>
+
+        <div class="flex items-center">
+            <button data-modal-target="search-modal" class="group relative inline-flex btn btn-md btn-solid-gray justify-center rounded-md py-1 pr-12">
+                <span class="z-10 pr-2 text-nowrap">{{ 'resources.filter.title'|trans }}</span>
+                <div class="btn-solid-indic rounded size-8 bg-bg-muted">
+                    <div class="mr-1.5 flex items-center justify-center">
+                        <twig:ux:icon name="hugeicons:filter-horizontal" class="iconify"/>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+        {% for resource in resources %}
+            <twig:Content:Resources:Item :resource="resource" />
+        {% endfor %}
+    </div>
+
+    {# Pagination footer using provided arrow buttons #}
+    {% set current = resources.getCurrentPageNumber() %}
+    {% set pages = resources.getPageCount() %}
+    {% if pages > 1 %}
+        <div class="mt-12 flex items-center justify-center gap-2">
+            {% set prevPage = current - 1 %}
+            {% set prevParams = app.request.query.all|merge({'page': prevPage}) %}
+            {% set prevHref = path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|default({})|merge(prevParams)) %}
+            <a aria-label="Go to prev page" class="btn btn-sm sm:btn-md inline-flex items-center bg-white border border-border rounded-global hover:bg-primary hover:text-white transition-colors {{ current <= 1 ? 'pointer-events-none opacity-50' }}" href="{{ current <= 1 ? '#' : prevHref }}">
+                <twig:ux:icon name="hugeicons:arrow-left-01" class="iconify" />
+                <span class="ml-2 text-sm">{{ 'resources.pagination.previous'|trans }}</span>
+            </a>
+            {% set nextPage = current + 1 %}
+            {% set nextParams = app.request.query.all|merge({'page': nextPage}) %}
+            {% set nextHref = path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|default({})|merge(nextParams)) %}
+            <a aria-label="Go to next page" class="btn btn-sm sm:btn-md inline-flex items-center bg-white border border-border rounded-global hover:bg-primary hover:text-white transition-colors {{ current >= pages ? 'pointer-events-none opacity-50' }}" href="{{ current >= pages ? '#' : nextHref }}">
+                <span class="mr-2 text-sm">{{ 'resources.pagination.next'|trans }}</span>
+                <twig:ux:icon name="hugeicons:arrow-right-01" class="iconify" />
+            </a>
+        </div>
+    {% endif %}
+</section>
+
+{# Center the modal using CSS Grid #}
+<dialog id="search-modal" data-search-modal class="modal fixed inset-0 z-50 grid place-items-center hidden" role="dialog" aria-modal="true">
+    <div aria-hidden="true" class="fixed inset-0 bg-black/40"></div>
+    <div data-modal-content class="modal-content relative p-6 rounded-xl bg-white shadow-xl max-w-lg w-[90%] sm:w-auto">
+        <h2 class="text-lg font-semibold mb-4">{{ 'resources.filter.title'|trans }}</h2>
+
+        {# Use GET method and preserve submitted state for styling #}
+        {{ form_start(form, { method: 'GET', attr: { class: 'relative w-full ' ~ (form.vars.submitted ? 'is-submitted' : ''), novalidate: 'novalidate' } }) }}
+        <div class="mb-4">
+            {{ form_widget(form.q, { attr: { class: 'w-full ui-form-base ui-form-input ui-form-input-md shadow border rounded-md text-sm text-fg border-border-input ' ~ (form.vars.submitted and not form.q.vars.valid ? 'is-invalid' : ''), placeholder: 'Rechercher une ressource…' } }) }}
+            <div class="ui-form-error">{{ form_errors(form.q) }}</div>
+        </div>
+        <div class="mb-4">
+            {{ form_widget(form.category, { attr: { class: 'w-full ui-form-base ui-form-input ui-form-input-md shadow border rounded-md text-sm text-fg border-border-input' ~ (form.vars.submitted and not form.category.vars.valid ? ' is-invalid' : '') } }) }}
+            <div class="ui-form-error">{{ form_errors(form.category) }}</div>
+        </div>
+        <button class="btn btn-primary w-full mt-4">
+            <twig:ux:icon name="hugeicons:filter-horizontal" class="mr-2"/>
+            Rechercher
+        </button>
+        {{ form_end(form) }}
+
+        <button data-modal-close class="btn btn-solid-gray w-full mt-3">
+            Fermer
+        </button>
+    </div>
+</dialog>

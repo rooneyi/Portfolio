@@ -1,0 +1,76 @@
+{% props member %}
+
+<section class="mt-28 md:mt-32 max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-8 xl:px-5">
+    <article class="flex w-full max-w-5xl -mt-28 md:-mt-34 relative flex-col flex-1 p-1 bg-bg-surface/30 border border-border/40 shadow-lg shadow-gray-50/50 rounded-global">
+        <div class="w-full p-4 sm:p-6 border border-border-strong/40 shadow-lg shadow-gray-50/50 rounded-global bg-bg">
+            <div data-fx-tabs data-profile-tab class="w-full" data-indicator-class-name="ui-tabs-indicator bg-bg-surface flex rounded-global absolute ease-linear duration-200">
+                <div data-tab-list-wrapper class="flex w-full">
+                    <ul data-tab-list role="tablist" class="flex items-center relative h-12 px-1 w-full rounded-md *:cursor-pointer border-b border-border-strong border-dashed">
+                        <li role="presentation" class="flex">
+                            <a href="#experiences" data-tabs-trigger data-target="tab1" tabindex="0" class="px-4 py-2 rounded text-fg disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title relative">
+                                {{ "team.sections.profile.experiences" | trans }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#educations" data-tabs-trigger data-target="tab2" tabindex="-1" class="px-4 py-2 rounded text-fg disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title relative">
+                                {{ "team.sections.profile.educations" | trans }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#specializations" data-tabs-trigger data-target="tab4" tabindex="-1" class="px-4 py-2 rounded text-fg disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title relative">
+                                {{ "team.sections.profile.specializations" | trans }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#cases" data-tabs-trigger data-target="tab5" tabindex="-1" class="px-4 py-2 rounded text-fg disabled:cursor-not-allowed disabled:opacity-80 fx-active:text-fg-title relative">
+                                {{ "team.sections.profile.cases" | trans }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div data-panels-container class="mt-2 w-full">
+                    <section role="tabpanel" tabindex="0" class="hidden fx-active:flex" data-tab-panel data-state="active" id="tab1" aria-labelledby="tab1">
+                        <ul class="w-full flex flex-col gap-2 text-fg bg-bg border border-border-strong/40 shadow-lg shadow-gray-50/50 rounded-global p-6">
+                            {% for experience in member.experiences %}
+                                <li class="flex items-start gap-4">
+                                    <twig:ux:icon name="hugeicons:group-items" class="mt-0.5 text-sm text-fg-muted" />
+                                    <span class="flex flex-1">{{ experience }}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                    <section role="tabpanel" tabindex="0" class="hidden fx-active:flex" data-tab-panel id="tab2" aria-labelledby="tab2">
+                        <ul class="w-full flex flex-col gap-2 text-fg bg-bg border border-border-strong/40 shadow-lg shadow-gray-50/50 rounded-global p-6">
+                            {% for education in member.educations %}
+                                <li class="flex items-start gap-4">
+                                    <twig:ux:icon name="hugeicons:group-items" class="mt-0.5 text-sm text-fg-muted" />
+                                    <span class="flex flex-1">{{ education }}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                    <section role="tabpanel" tabindex="0" class="hidden fx-active:flex" data-tab-panel id="tab4" aria-labelledby="tab4">
+                        <ul class="w-full flex flex-col gap-2 text-fg bg-bg border border-border-strong/40 shadow-lg shadow-gray-50/50 rounded-global p-6">
+                            {% for specialization in member.specializations %}
+                                <li class="flex items-start gap-4">
+                                    <twig:ux:icon name="hugeicons:cursor-pointer-02" class="mt-0.5 text-sm text-fg-muted" />
+                                    <span class="flex flex-1">{{ specialization }}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                    <section role="tabpanel" tabindex="0" class="hidden fx-active:flex" data-tab-panel id="tab5" aria-labelledby="tab5">
+                        <ul class="w-full flex flex-col gap-2 text-fg bg-bg border border-border-strong/40 shadow-lg shadow-gray-50/50 rounded-global p-6">
+                            {% for case in member.cases %}
+                                <li class="flex items-start gap-4">
+                                    <twig:ux:icon name="hugeicons:keyframes-double-add" class="mt-0.5 text-sm text-fg-muted" />
+                                    <span class="flex flex-1">{{ case }}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>

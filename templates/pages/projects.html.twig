@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projects · rooney.tech{% endblock %}
+
+{% block body %}
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <header class="space-y-3">
+            <p class="text-sm text-muted-foreground">Selected work</p>
+            <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-foreground">Projects</h1>
+            <p class="text-sm text-muted-foreground max-w-2xl">
+                A selection of backend and fullstack projects that reflect how I think
+                about architecture, maintainability, and developer experience.
+            </p>
+        </header>
+
+        <twig:Project projects="{{ projects }}" />
+    </div>
+</section>
+{% endblock %}

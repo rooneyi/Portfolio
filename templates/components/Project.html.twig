@@ -1,0 +1,65 @@
+<section class="relative py-28 bg-muted/30">
+    <div class="max-w-6xl mx-auto px-6">
+
+        <!-- Title -->
+        <div class="text-center mb-10">
+            <p class="text-sm text-muted-foreground mb-4">
+                Selected work
+            </p>
+            <h2 class="text-4xl font-semibold tracking-tight text-foreground">
+                Recent Work
+            </h2>
+            <p class="mt-4 text-sm text-muted-foreground max-w-2xl mx-auto">
+                Here are some recent projects I've built.
+            </p>
+        </div>
+
+        <!-- Projects horizontal scroll avec boutons -->
+        <div class="relative">
+            <button type="button" id="scrollLeft" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-primary text-primary-foreground rounded-full shadow-lg p-2 hover:bg-primary/80 transition">
+                <twig:Ux:Icon name="heroicons:chevron-left" class="w-5 h-5" />
+            </button>
+            <button type="button" id="scrollRight" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary text-primary-foreground rounded-full shadow-lg p-2 hover:bg-primary/80 transition">
+                <twig:Ux:Icon name="heroicons:chevron-right" class="w-5 h-5" />
+            </button>
+            <div id="projectScroll" class="flex gap-3 md:gap-6 lg:gap-8 px-2 pb-2 overflow-x-hidden scroll-smooth snap-x snap-mandatory scrollbar-hide" style="min-width: 240px;">
+                {% for project in projects %}
+                    <twig:Card class="w-[240px] sm:w-[300px] rounded-xl overflow-hidden flex-shrink-0 snap-center">
+                        <!-- Image -->
+                        <div class="aspect-video bg-muted">
+                            {% if project.image %}
+                                <img src="{{ asset('uploads/projects/' ~ project.image) }}" alt="{{ project.name }}" class="h-full w-full object-cover" />
+                            {% else %}
+                                <img src="/images/project-placeholder.png" alt="Project preview" class="h-full w-full object-cover" />
+                            {% endif %}
+                        </div>
+                        <twig:Card:Header class="py-4">
+                            <twig:Card:Title class="text-base">{{ project.name }}</twig:Card:Title>
+                            <twig:Card:Description class="text-xs">{{ project.body|striptags|length > 80 ? project.body|striptags|slice(0,80) ~ '...' : project.body|striptags }}</twig:Card:Description>
+                        </twig:Card:Header>
+                        <twig:Card:Footer class="flex justify-between py-3">
+                            <twig:Button size="sm" variant="outline" as="a" href="{{ project.githubLink }}" target="_blank">Code</twig:Button>
+                            {% if project.link %}
+                                <twig:Button size="sm" as="a" href="{{ project.link }}" target="_blank">View</twig:Button>
+                            {% endif %}
+                        </twig:Card:Footer>
+                    </twig:Card>
+                {% else %}
+                    <div class="text-center text-muted-foreground">No project found.</div>
+                {% endfor %}
+            </div>
+        </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollContainer = document.getElementById('projectScroll');
+            document.getElementById('scrollLeft').onclick = function() {
+                scrollContainer.scrollBy({ left: -320, behavior: 'smooth' });
+            };
+            document.getElementById('scrollRight').onclick = function() {
+                scrollContainer.scrollBy({ left: 320, behavior: 'smooth' });
+            };
+        });
+        </script>
+
+    </div>
+</section>

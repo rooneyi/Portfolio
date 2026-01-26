@@ -1,0 +1,62 @@
+@utility btn-solid-primary {
+    @apply text-neutral-50 bg-primary [--btn-focus-outline-color:var(--color-primary-700)]
+}
+
+@utility btn-solid-secondary {
+    @apply text-neutral-50 bg-secondary [--btn-focus-outline-color:var(--color-secondary-700)]
+}
+
+@utility btn-solid-gray {
+    @apply text-gray-800 bg-bg-surface [--btn-focus-outline-color:var(--color-secondary-700)]
+}
+
+@utility btn-solid-neutral {
+    --btn-solid-top-shadow: var(--color-gray-800);
+    --btn-solid-bottom-shadow: var(--color-gray-700);
+    --btn-solid-top-shadow-hover: var(--color-gray-800);
+    --btn-solid-bottom-shadow-hover: var(--color-gray-900);
+    --btn-solid-color: var(--color-gray-900);
+    --btn-solid-color-hover: var(--color-gray-950);
+    --btn-solid-color-press: var(--color-gray-900);
+}
+
+@utility btn-flexi-white {
+    --btn-flexi-bg: var(--color-white);
+    --btn-flexi-hover-bg: var(--color-gray-100);
+    --btn-flexi-active-bg: var(--color-gray-50);
+    --btn-flexi-shadow-a: var(--color-gray-300);
+    --btn-flexi-shadow-b: var(--color-gray-200);
+    --btn-flexi-shadow-c: var(--color-gray-50);
+    --btn-flexi-shadow-active-a: var(--color-gray-400);
+    --btn-flexi-shadow-active-b: var(--color-gray-300);
+    --btn-flexi-shadow-active-c: var(--color-gray-500);
+}
+
+@utility btn-outline-gray {
+    --btn-outline-bg: var(--color-gray-50);
+    --btn-outline-color: var(--color-gray-200);
+    --btn-outline-text-color: var(--color-gray-800);
+    --btn-outline-bg-hover: --alpha(var(--color-gray-100) / 60%);
+}
+
+@utility btn-soft-gray {
+    --btn-soft-bg-color: var(--color-gray-50);
+    --btn-soft-bg-color-hover: --alpha(var(--color-gray-200) / 75%);
+    --btn-soft-bg-color-press: --alpha(var(--color-gray-200) / 80%);
+    --btn-soft-text-color: var(--color-gray-800);
+    --btn-soft-text-color-hover: var(--color-gray-900);
+}
+
+@utility btn-ghost-primary {
+    --btn-ghost-bg-color-hover: --alpha(var(--color-primary-100) / 50%);
+    --btn-ghost-bg-color-press: --alpha(var(--color-primary-100) / 70%);
+    --btn-ghost-text-color: var(--color-primary-600);
+    --btn-ghost-text-color-hover: var(--color-primary-700);
+}
+
+@utility btn-ghost-gray {
+    --btn-ghost-bg-color-hover: --alpha(var(--color-gray-200) / 40%);
+    --btn-ghost-bg-color-press: --alpha(var(--color-gray-200) / 75%);
+    --btn-ghost-text-color: var(--color-gray-800);
+    --btn-ghost-text-color-hover: var(--color-gray-900);
+}

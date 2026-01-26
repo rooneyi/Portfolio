@@ -1,0 +1,209 @@
+summaries:
+    -
+        title: Financing
+        description: We offer a comprehensive range of legal services aimed at assisting our clients in structuring, negotiating, and executing complex financing transactions at both national and international levels, while managing the legal risks associated with these transactions.
+    -
+        title: Corporate - M&A
+        description: We actively handle legal matters related to the formation, structuring, governance, and dissolution of companies. We advise businesses on mergers and acquisitions, restructurings, capital transactions, and other legal aspects of commercial entities.
+
+    -
+        title: Compliance & Legal monitoring
+        description: We assist companies in complying with applicable sector-specific regulations, obtaining and maintaining operational licenses, managing non-compliance risks, and meeting regulatory requirements in a complex and constantly evolving business environment.
+
+    -
+        title: Labor and Employment
+        description: We assist national and international companies with all legal aspects related to personnel management, in compliance with the Congolese legal framework.
+    -
+        title: Contract engineering
+        description: We assist our clients in developing complex contractual frameworks and guide them through all phases of their contractual relationships, from strategic design through implementation and resolution of potential disputes.
+
+    -
+        title: Tax
+        description: We distinguish ourselves by our ability to translate complex tax issues into concrete and legally secure solutions, enabling our clients to focus on their development while managing their tax risks in an ever-changing regulatory environment.
+
+    -
+        title: Intellectual Property
+        description: As authorised agents in the Democratic Republic of Congo, we provide comprehensive services to secure our clients' innovations and creations within a rapidly evolving digital landscape.
+    -
+        title: Privacy & Data Protection
+        description: Our Privacy and Data Protection practice is recognised for its pioneering role in developing this emerging legal expertise and for its ability to provide innovative solutions tailored to the specific challenges of the Congolese market.
+    -
+        title: Dispute resolution
+        description: We help businesses and individuals effectively resolve their disputes, whether through court proceedings or via arbitration and other alternative dispute resolution methods.
+    -
+        title: Banking & Finance
+        description: The banking, finance, and insurance sector is one of the most regulated in the business world. We provide legal support to all industry stakeholders, including banks, financial institutions, investment funds, insurance companies, and asset managers, on all legal matters inherent to the industry.
+
+    -
+        title: Energy and Hydrocarbons
+        description: We provide proven expertise to cover the entire energy development process, from project design to the operational phase, including transportation, distribution, and long-term asset valorisation.
+    -
+        title: Mining and Metals
+        description: We advise on mining infrastructure development, covering all legal aspects related to prospecting, development, exploration, marketing, and transportation of virtually all types of minerals, as well as the sale and purchase of significant mining assets.
+    -
+        title: Infrastructure and Major Projects
+        description: Our team supports infrastructure project stakeholders throughout their lifecycle, from development to structuring, including licensing, financing, construction, operations, and litigation.
+
+    -
+        title: Construction and Real estate
+        description: We support investors, developers, contractors, and individuals through all stages of their real estate and construction projects, ensuring that legal aspects, including environmental regulations, are rigorously examined and managed.
+    -
+        title: Technology, Media and Telecommunications
+        description: We offer strategic legal advice to companies operating in these dynamic sectors. Our services encompass communications regulation, data protection, cybersecurity, and complex transactions.
+
+sectors:
+    subtitle: The sectors that shape our expertise
+    title: Industry sectors
+    description: Our firm specialises in select industry sectors wherein we have cultivated substantial expertise, thereby enabling us to render bespoke legal services of the highest caliber that address the particular exigencies of our clientele.
+    items:
+        -
+            title: Banking & Finance
+            description: The banking, finance, and insurance sector is one of the most regulated in the business world. We provide legal support to all industry participants, including banks, financial institutions, investment funds, insurance companies, and asset managers, on all legal matters inherent to the industry.
+        -
+            title: Energy and Hydrocarbons
+            description: We provide proven expertise to cover the entire energy development process, from project conception to operational phase, including transportation, distribution, and long-term asset optimisation.
+        -
+            title: Mining and Metals
+            description: We advise on mining infrastructure development, covering all legal aspects related to prospecting, development, exploration, marketing, and transportation of virtually all types of minerals, as well as the sale and purchase of significant mining assets.
+        -
+            title: Infrastructure and Major projects
+            description: Our team supports infrastructure project stakeholders throughout the entire project lifecycle, from development to structuring, including licensing, financing, construction, operations, and dispute resolution.
+        -
+            title: Construction and Real estate
+            description: We support investors, developers, contractors, and individuals through all stages of their real estate and construction projects, ensuring that legal aspects, including environmental regulations, are rigorously examined and managed.
+        -
+            title: Technology, Media and Telecommunications
+            description: We offer strategic legal advice to companies operating in these dynamic sectors. Our services encompass communications regulation, data protection, cybersecurity, and complex transactions.
+
+domains:
+    subtitle: Comprehensive support on all your legal matters
+    title: Business areas
+    items:
+        -
+            title: Banking & Finance
+            items:
+                - Structuring and negotiating bank and project financing, particularly in the infrastructure, energy, and mining sectors.
+                - Legal advice on project financing contracts, including loan agreements, security contracts, and risk-sharing arrangements.
+                - Due diligence related to project financing, including review of property titles, permits, key contracts, regulations, and environmental issues.
+                - Guidance on complex financing structures such as leveraged project finance, structured finance, and public-private partnerships (PPP).
+                - Assistance in setting up special purpose investment vehicles for project financing, such as project companies.
+                - Legal counsel on partnerships with government entities, development agencies, international financial institutions, and other stakeholders involved in project financing.
+                - Representation in disputes related to project financing, including
+        -
+            title: Corporate, M&A and restructurations
+            items:
+                - Assistance with mergers and acquisitions, including planning, negotiation, documentation, and execution of these transactions.
+                - Support in structuring, formation, and dissolution of commercial companies, including national subsidiaries, joint ventures, and other types of partnerships.
+                - Advice on regulatory compliance and legal aspects of corporate governance.
+                - Organisation and management of shareholders' meetings and board of directors' meetings (corporate secretariat).
+                - Negotiation and drafting of commercial contracts such as shareholders’ agreements, joint ventures, distribution agreements, and franchise contracts.
+                - Guidance on corporate restructuring matters, including spin-offs, mergers, and structural changes.
+                - Representation in corporate law and M&A-related disputes, including post-acquisition litigation and shareholder conflicts.
+        -
+            title: Regulatory compliance & Legal monitoring
+            items:
+                - Regulatory compliance advice, including interpretation and application of national and international laws and regulations across various sectors.
+                - Assistance in obtaining and maintaining sector-specific operational licenses.
+                - Support in cross-border transactions involving compliance and regulatory matters, including mergers and acquisitions, international partnerships, and foreign investments.
+                - Guidance on anti-money laundering, counter-terrorism financing, anti-corruption, and other financial compliance issues.
+                - Representation of clients in regulatory investigations and compliance-related litigation.
+                - Monitoring of national and international legislative developments.
+                - Analysis of significant judicial decisions.
+                - Tracking positions of administrative and regulatory authorities.
+                - Real-time alerts on critical legal changes.
+        -
+            title: Labor & Employment
+            items:
+                - Drafting employment contracts tailored to your specific needs.
+                - Ensuring compliance when using external staffing providers.
+                - Securing employee transfers during restructuring operations.
+                - Preparation and safeguarding of individual dismissal procedures.
+                - Assistance with the application of disciplinary sanctions.
+                - Support during negotiations of mutually agreed terminations.
+                - Assistance in organising union elections and conducting mandatory periodic meetings.
+                - Support in collective bargaining negotiations.
+                - Conducting social compliance audits.
+                - Preparation for labor inspections.
+                - Assistance in managing redundancy procedures for economic reasons.
+                - Defense of your interests in disputes before labor inspection authorities and labor courts.
+        -
+            title: Contractual engineering
+            items:
+                - Development of contract structures tailored to your complex operations.
+                - Mapping of legal and operational risks.
+                - Securing sensitive clauses (liability, intellectual property, termination).
+                - Structuring multi-jurisdictional contractual arrangements.
+                - Assistance during contract execution and amendments.
+                - Securing contract addenda and modifications.
+                - Evaluation of the compliance and effectiveness of existing contracts.
+                - Standardisation and harmonisation of contract templates.
+                - Analysis of pre-litigation contractual situations.
+                - Support in negotiation and amicable dispute resolution.
+                - Defense of interests in contractual litigation.
+        -
+            title: Tax
+            items:
+                - Ensuring proper application of specific tax regimes.
+                - Optimisation of business establishment in the DRC.
+                - Prevention of double taxation risks.
+                - Securing the application of tax treaties.
+                - Tax structuring for acquisition and disposal operations.
+                - Assistance during tax audits.
+                - Negotiation with tax authorities in case of disputes.
+                - Ensuring compliance with parafiscal declaration obligations.
+                - Analysis of the impact of tax reforms.
+                - Development of tax litigation strategies.
+        -
+            title: Intellectual property
+            items:
+                - Trademark registration and renewal
+                - Patent filing and prosecution
+                - Copyright and neighboring rights protection
+                - Registration of industrial designs and models
+                - Securing domain names and digital assets
+                - Trade secrets and know-how protection strategies
+                - Drafting and negotiation of licensing and technology transfer agreements
+                - Legal structuring of commercial franchises
+                - Intellectual property due diligence in acquisition transactions
+                - Infringement proceedings and unfair competition actions
+                - Legal support for technology companies and innovative startups
+        -
+            title: Privacy and Data protection
+            items:
+                - Compliance assistance with Ordinance-Law No. 23/010 of March 13, 2023 establishing the Digital Code
+                - Alignment with international standards (European GDPR, African Union frameworks)
+                - Data processing mapping and impact assessment
+                - Development of privacy policies and data protection frameworks
+                - Guidance in relations with the Regulatory Authority for Posts, Telecommunications and Information and Communication Technologies (ARPTIC)
+                - Integration of privacy by design in innovation projects
+                - Data protection due diligence in M&A transactions
+                - International data transfer compliance
+                - Assistance during regulatory inspections
+                - Representation in data protection disputes
+                - Mediation with data subjects in case of disputes
+        -
+            title: Dispute resolution
+            items:
+                - Representation of clients before Congolese courts and tribunals in civil and commercial disputes, including contractual disputes, debt recovery proceedings, individual labor disputes, and liability matters
+                - Representation of clients before administrative courts to challenge decisions by administrative authorities, regulations, or public policies
+                - Provision of legal research and drafting of legal memoranda to support international law firms on matters of local law in international arbitration proceedings
+                - Representation of clients in arbitration proceedings before institutional or ad hoc arbitral tribunals to resolve commercial disputes and investment-related matters
+                - Assistance with mediation and other forms of alternative dispute resolution to achieve negotiated solutions outside of courts
+                - Assistance with the enforcement of judgments and arbitral awards at national and international levels
+
+approaches:
+    -
+        title: In-Depth contextual analysis
+        description: Our comprehensive approach transcends conventional legal services by integrating multidimensional analysis into every client matter. We meticulously examine each case through legal, economic, political, and cultural lenses to develop strategies that address all relevant factors affecting your business operations in the Democratic Republic of Congo.
+    -
+        title: Tailored solutions
+        description: We fundamentally reject standardised legal methodologies in favor of developing bespoke strategies precisely calibrated to each client's distinct objectives, operational context, and industry-specific challenges. Our client engagement process begins with a comprehensive assessment of your organisation's particular legal requirements, business goals, and risk tolerance parameters.
+    -
+        title: Skills transfert
+        description: Our firm is distinctly committed to collaborative knowledge development through strategic skills transfer initiatives. We systematically engage with our clients' internal legal departments and management teams to substantially enhance their legal competencies and institutional capacity. This collaborative approach encompasses customised training sessions, joint case management, and the development of bespoke legal frameworks tailored to each client's operational requirements within the Democratic Republic of Congo.
+    -
+        title: Risk anticipation & Management
+        description: |
+            Our extensive operational experience enable our legal practitioners to conduct sophisticated risk assessments with exceptional precision and foresight. We employ advanced analytical methodologies to identify potential legal vulnerabilities, regulatory challenges, and compliance issues at their earliest manifestation, well before they can develop into substantive concerns.
+
+            Upon comprehensive risk identification, we design and implement customised preventive legal frameworks specifically calibrated to each client's unique operational profile and sector-specific requirements.

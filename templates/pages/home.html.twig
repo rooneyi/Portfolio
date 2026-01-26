@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<div class="min-h-screen bg-background">
+    <main>
+        <twig:Pattern:Background />
+        <twig:AboutHero />
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+            <div id="about"></div>
+            <twig:Hero />
+            <twig:Stack />
+            <div id="projects"></div>
+            <twig:Project projects="{{ projects }}" />
+            <twig:Missions />
+        </section>
+    </main>
+</div>
+{% endblock %}

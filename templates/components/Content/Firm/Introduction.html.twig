@@ -1,0 +1,21 @@
+{% props introduction = [] %}
+
+<section class="relative mt-28 xl:mt-32 max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-8 xl:px-5 flex flex-col md:flex-row gap-16 lg:gap-20">
+    <div class="md:w-lg md:max-w-lg flex flex-col md:sticky md:top-30">
+        <span class="head-title flex w-max" data-reveal data-direction="top">
+          <span class="relative px-3 py-0.5 z-4 text-secondary text-sm rounded">{{ 'firm.sections.introduction.title' | trans }}</span>
+        </span>
+        <h2 data-reveal data-direction="bottom" class="text-fg-title text-3xl/snug lg:text-4xl/snug font-medium text-balance mt-5">
+            {{ 'firm.sections.introduction.subtitle' | trans }}
+        </h2>
+    </div>
+    <div class="flex-1 flex flex-col">
+        <div class="md:pl-4 lg:pl-16 space-y-3">
+            {% for paragraph in introduction %}
+                <p data-reveal data-direction="bottom" class="font-medium text-fg-title text-lg lg:text-xl">
+                    {{ paragraph }}
+                </p>
+            {% endfor %}
+        </div>
+    </div>
+</section>

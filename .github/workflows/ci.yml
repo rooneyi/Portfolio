@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.4'
+        extensions: mbstring, intl, pdo_mysql
+        coverage: none
+    - name: Install Composer dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Run PHPUnit tests
+      run: php bin/phpunit
+
+    - name: Build assets
+      run: |
+        npm install
+        npm run build
+
+    - name: Lint CSS
+      run: npx stylelint "assets/styles/**/*.css"
+
+    - name: Lint JS
+      run: npx eslint assets/**/*.js
+
+    - name: Deploy to VPS
+      if: success()
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        port: ${{ secrets.VPS_PORT }}
+        source: .
+        target: ${{ secrets.VPS_TARGET }}
+
+    - name: Run cache:clear on VPS
+      if: success()
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        port: ${{ secrets.VPS_PORT }}
+        script: |
+          cd ${{ secrets.VPS_TARGET }}
+          php bin/console cache:clear

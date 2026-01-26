@@ -1,0 +1,65 @@
+{% set active_class = "text-primary decoration-wavy underline-offset-2 underline decoration-current" %}
+
+<header class="sticky w-full top-0 z-60 bg-background/80 backdrop-blur-sm border-b border-border/60">
+    <nav class="max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-8 xl:px-5 flex items-center justify-between gap-4 py-3">
+        <div class="flex items-center relative z-40 lg:z-auto">
+            <a href="https://rooneykalumba.tech" aria-label="Home" class="w-max">
+                rooneykalumba
+            </a>
+        </div>
+        <!-- Burger button only on mobile -->
+
+
+        <button id="burger-btn" class="lg:hidden block text-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Ouvrir le menu"
+            onclick="toggleMobileMenu()">
+            <svg id="burger-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 block">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+            </svg>
+            <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hidden">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <!-- Menu mobile slide-down sous la navbar -->
+        <div id="mobile-menu" class="hidden absolute left-0 right-0 top-full bg-background/70 backdrop-blur-md shadow-lg flex flex-col items-center gap-6 py-6 rounded-b-xl transition-all duration-300 lg:hidden">
+            <a href="{{ path('app_projects_index') }}" class="text-lg text-white font-medium transition-all duration-300 opacity-0 -translate-y-4 tracking-wide" onclick="toggleMobileMenu(true)">Projects</a>
+            <a href="{{ path('app_contact_index') }}" class="text-lg text-white font-medium transition-all duration-300 opacity-0 -translate-y-4 tracking-wide" onclick="toggleMobileMenu(true)">Contact</a>
+        </div>
+        <script>
+        function toggleMobileMenu(forceClose = false) {
+            const menu = document.getElementById('mobile-menu');
+            const burger = document.getElementById('burger-btn');
+            const burgerIcon = document.getElementById('burger-icon');
+            const closeIcon = document.getElementById('close-icon');
+            const isOpen = !menu.classList.contains('hidden');
+            if (isOpen || forceClose) {
+                // Fermer
+                menu.classList.add('hidden');
+                burgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                menu.querySelectorAll('a').forEach((el) => {
+                    el.classList.add('opacity-0', '-translate-y-4');
+                    el.classList.remove('opacity-100', 'translate-y-0');
+                });
+            } else {
+                // Ouvrir
+                menu.classList.remove('hidden');
+                burgerIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+                setTimeout(() => {
+                    menu.querySelectorAll('a').forEach((el, i) => {
+                        setTimeout(() => {
+                            el.classList.remove('opacity-0', '-translate-y-4');
+                            el.classList.add('opacity-100', 'translate-y-0');
+                        }, 80 * i);
+                    });
+                }, 50);
+            }
+        }
+        </script>
+        <!-- Menu desktop -->
+        <ul class="hidden lg:flex flex-row items-center gap-6 text-muted-foreground">
+            <li><a href="{{ path('app_projects_index') }}" class="{{ 'app_projects_index' == app.current_route ? active_class : '' }} py-1 px-2.5 rounded-global hover:bg-muted/20">Projects</a></li>
+            <li><a href="{{ path('app_contact_index') }}" class="{{ 'app_contact_index' == app.current_route ? active_class : '' }} py-1 px-2.5 rounded-global hover:bg-muted/20">Contact</a></li>
+        </ul>
+    </nav>
+</header>
